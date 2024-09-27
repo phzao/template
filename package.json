@@ -95,7 +95,7 @@
     "typescript": "^5.4.5"
   },
   "jest": {
-    "rootDir": "./",
+    "rootDir": "src",
     "moduleNameMapper": {
       "^@infrastructure/(.*)$": "<rootDir>/src/infrastructure/$1",
       "^@application/(.*)$": "<rootDir>/src/application/$1",
@@ -116,6 +116,23 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@application/(.*)": [
+        "<rootDir>/application/$1"
+      ],
+      "@domain/(.*)": [
+        "<rootDir>/domain/$1"
+      ],
+      "@infrastructure/(.*)": [
+        "<rootDir>/infrastructurea/$1"
+      ],
+      "@common/(.*)": [
+        "<rootDir>/common/$1"
+      ],
+      "@resources/(.*)": [
+        "<rootDir>/resources/$1"
+      ]
+    }
   }
 }
